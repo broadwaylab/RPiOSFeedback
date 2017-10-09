@@ -1,0 +1,33 @@
+{
+  "name": "RPAppStoreFeedback",
+  "version": "0.0.1",
+  "summary": "RPAppStoreFeedback",
+  "description": "This fantastic view changes its color gradually makes your app look fantastic!",
+  "homepage": "https://github.com/mtorcutt/RPAppStoreFeedback",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Michael Orcutt": "michaeltorcutt@gmail.com"
+  },
+  "source": {
+    "path": "~/Desktop/Projects/ReviewPush/RPAppStoreFeedback/.git/"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RPAppStoreFeedback/**/*.{swift}",
+  "resources": "RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}",
+  "requires_arc": true,
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  },
+  "resource_bundles": {
+    "RPAppStoreFeedback": [
+      "RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
+    ]
+  }
+}
