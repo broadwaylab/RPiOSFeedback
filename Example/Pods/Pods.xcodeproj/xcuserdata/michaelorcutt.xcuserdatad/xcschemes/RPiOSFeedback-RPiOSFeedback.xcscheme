@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F532E79F6A9B5A9E7AA593FB03AFEC4F'
-               BlueprintName = 'RPAppStoreFeedback-RPAppStoreFeedback'
+               BlueprintIdentifier = '6D8C605142B132CC509D4FDBA3A1990D'
+               BlueprintName = 'RPiOSFeedback-RPiOSFeedback'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RPAppStoreFeedback.bundle'>
+               BuildableName = 'RPiOSFeedback.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

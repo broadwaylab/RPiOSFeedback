@@ -10,16 +10,16 @@ Pod::Spec.new do |s|
     s.homepage              = 'https://github.com/mtorcutt/RPiOSFeedback'
     s.license               = { :type => 'MIT', :file => 'LICENSE' }
     s.author                = { 'Michael Orcutt' => 'michaeltorcutt@gmail.com' }
-    s.source                = { :git => 'https://github.com/mtorcutt/RPiOSFeedback.git', :tag => s.version.to_s }
+s.source                = { :git => 'https://github.com/mtorcutt/RPiOSFeedback.git', :tag => s.version.to_s }
     s.ios.deployment_target = '10.0'
-    s.source_files          = 'RPAppStoreFeedback/**/*.{swift}'
-    s.resources             = 'RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}'
+    s.source_files          = 'RPiOSFeedback/**/*.{swift}'
+    s.resources             = 'RPiOSFeedback/**/*.{png,jpeg,jpg,storyboard,xib}'
     s.requires_arc          = true
 
     s.dependency 'Alamofire'
 
     s.resource_bundles = {
-        'RPAppStoreFeedback' => ['RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}']
+        'RPiOSFeedback' => ['RPiOSFeedback/**/*.{png,jpeg,jpg,storyboard,xib}']
     }
 
 end

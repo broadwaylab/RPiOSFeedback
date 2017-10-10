@@ -8,34 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3BC8D4A482F03ADD8170A41E /* Pods_RPAppStoreFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5891E39DB4E9634EF1D66B05 /* Pods_RPAppStoreFeedback.framework */; };
-		8513D3F51F17DDA600C48D5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513D3F41F17DDA600C48D5C /* User.swift */; };
-		8513D3F71F17E1EA00C48D5C /* RPAppStoreFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513D3F61F17E1EA00C48D5C /* RPAppStoreFeedback.swift */; };
-		8513D3F91F17E55900C48D5C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513D3F81F17E55900C48D5C /* Settings.swift */; };
-		8536B8BC1EFAC7B800CCF736 /* RPAppStoreFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8536B8B21EFAC7B800CCF736 /* RPAppStoreFeedback.framework */; };
+		8519B0B61F8C27C80009D10F /* star-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 8519B0AD1F8C27C80009D10F /* star-large.png */; };
+		8519B0B71F8C27C80009D10F /* RPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0AE1F8C27C80009D10F /* RPUser.swift */; };
+		8519B0B81F8C27C80009D10F /* RPStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0AF1F8C27C80009D10F /* RPStyle.swift */; };
+		8519B0B91F8C27C80009D10F /* RPSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B01F8C27C80009D10F /* RPSettings.swift */; };
+		8519B0BA1F8C27C80009D10F /* RPMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B11F8C27C80009D10F /* RPMetaModel.swift */; };
+		8519B0BB1F8C27C80009D10F /* RPFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B21F8C27C80009D10F /* RPFeedbackViewController.swift */; };
+		8519B0BC1F8C27C80009D10F /* RPFeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B31F8C27C80009D10F /* RPFeedbackRouter.swift */; };
+		8519B0BD1F8C27C80009D10F /* RPFeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B41F8C27C80009D10F /* RPFeedbackModel.swift */; };
+		8519B0BE1F8C27C80009D10F /* RPFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0B51F8C27C80009D10F /* RPFeedback.swift */; };
+		8519B0C01F8C280C0009D10F /* RPFeedback+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0BF1F8C280C0009D10F /* RPFeedback+UIImage.swift */; };
+		8531DACA1F8C51CC00FD6F0E /* x~22x22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */; };
+		8531DACD1F8C53E800FD6F0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858120181EFC5C4400F91828 /* Main.storyboard */; };
+		8536B8BC1EFAC7B800CCF736 /* RPiOSFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */; };
 		8536B8C11EFAC7B800CCF736 /* RPAppStoreFeedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536B8C01EFAC7B800CCF736 /* RPAppStoreFeedbackTests.swift */; };
 		8536B8C31EFAC7B800CCF736 /* RPAppStoreFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 8536B8B51EFAC7B800CCF736 /* RPAppStoreFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		855B99521F223DF0003A8782 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B99511F223DF0003A8782 /* Meta.swift */; };
-		856B0F2A1F12AE8000D27EE8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B0F291F12AE8000D27EE8 /* Router.swift */; };
-		856B0F2C1F12AF2A00D27EE8 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B0F2B1F12AF2A00D27EE8 /* Feedback.swift */; };
-		858120171EFC5C2F00F91828 /* RPAppStoreFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858120161EFC5C2F00F91828 /* RPAppStoreFeedbackViewController.swift */; };
-		858120191EFC5C4400F91828 /* RPAppStoreFeedbackStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858120181EFC5C4400F91828 /* RPAppStoreFeedbackStoryboard.storyboard */; };
-		85818A5B1F02C64F008D88A8 /* BonMotConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818A5A1F02C64F008D88A8 /* BonMotConstants.swift */; };
 		85818A6E1F054E37008D88A8 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85818A6D1F054E37008D88A8 /* SAConfettiView.swift */; };
 		85818A731F054E8C008D88A8 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 85818A6F1F054E8C008D88A8 /* confetti.png */; };
 		85818A741F054E8C008D88A8 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 85818A701F054E8C008D88A8 /* diamond.png */; };
 		85818A751F054E8C008D88A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 85818A711F054E8C008D88A8 /* star.png */; };
 		85818A761F054E8C008D88A8 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 85818A721F054E8C008D88A8 /* triangle.png */; };
-		85818A781F056FCD008D88A8 /* star-dos.png in Resources */ = {isa = PBXBuildFile; fileRef = 85818A771F056FCD008D88A8 /* star-dos.png */; };
-		85A120DE1F2B98EC0061F504 /* x~22x22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */; };
-		85E518481F12C0B700ADE983 /* activity-dots3.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E518451F12C0B700ADE983 /* activity-dots3.png */; };
-		85E518491F12C0B700ADE983 /* activity-dots3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E518461F12C0B700ADE983 /* activity-dots3@2x.png */; };
-		85E5184A1F12C0B700ADE983 /* activity-dots3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E518471F12C0B700ADE983 /* activity-dots3@3x.png */; };
-		85E518511F12C9F500ADE983 /* activity-dots1.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E5184B1F12C9F500ADE983 /* activity-dots1.png */; };
-		85E518521F12C9F500ADE983 /* activity-dots1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E5184C1F12C9F500ADE983 /* activity-dots1@2x.png */; };
-		85E518531F12C9F500ADE983 /* activity-dots1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E5184D1F12C9F500ADE983 /* activity-dots1@3x.png */; };
-		85E518541F12C9F500ADE983 /* activity-dots2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E5184E1F12C9F500ADE983 /* activity-dots2.png */; };
-		85E518551F12C9F500ADE983 /* activity-dots2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E5184F1F12C9F500ADE983 /* activity-dots2@2x.png */; };
-		85E518561F12C9F500ADE983 /* activity-dots2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E518501F12C9F500ADE983 /* activity-dots2@3x.png */; };
 		FE26331CA16A951D9D9DB8B6 /* Pods_RPAppStoreFeedbackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4D5F88F58BF8D369906B78 /* Pods_RPAppStoreFeedbackTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,37 +45,30 @@
 		051247CF59F9365BFB54BA50 /* Pods-RPAppStoreFeedbackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPAppStoreFeedbackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPAppStoreFeedbackTests/Pods-RPAppStoreFeedbackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5891E39DB4E9634EF1D66B05 /* Pods_RPAppStoreFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPAppStoreFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B11B8E4D16242689C0B975 /* Pods-RPAppStoreFeedback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPAppStoreFeedback.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPAppStoreFeedback/Pods-RPAppStoreFeedback.release.xcconfig"; sourceTree = "<group>"; };
-		8513D3F41F17DDA600C48D5C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		8513D3F61F17E1EA00C48D5C /* RPAppStoreFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAppStoreFeedback.swift; sourceTree = "<group>"; };
-		8513D3F81F17E55900C48D5C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		8536B8B21EFAC7B800CCF736 /* RPAppStoreFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPAppStoreFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8519B0AD1F8C27C80009D10F /* star-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-large.png"; sourceTree = "<group>"; };
+		8519B0AE1F8C27C80009D10F /* RPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPUser.swift; sourceTree = "<group>"; };
+		8519B0AF1F8C27C80009D10F /* RPStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPStyle.swift; sourceTree = "<group>"; };
+		8519B0B01F8C27C80009D10F /* RPSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSettings.swift; sourceTree = "<group>"; };
+		8519B0B11F8C27C80009D10F /* RPMetaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMetaModel.swift; sourceTree = "<group>"; };
+		8519B0B21F8C27C80009D10F /* RPFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedbackViewController.swift; sourceTree = "<group>"; };
+		8519B0B31F8C27C80009D10F /* RPFeedbackRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedbackRouter.swift; sourceTree = "<group>"; };
+		8519B0B41F8C27C80009D10F /* RPFeedbackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedbackModel.swift; sourceTree = "<group>"; };
+		8519B0B51F8C27C80009D10F /* RPFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedback.swift; sourceTree = "<group>"; };
+		8519B0BF1F8C280C0009D10F /* RPFeedback+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RPFeedback+UIImage.swift"; sourceTree = "<group>"; };
+		8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPiOSFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8536B8B51EFAC7B800CCF736 /* RPAppStoreFeedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppStoreFeedback.h; sourceTree = "<group>"; };
 		8536B8B61EFAC7B800CCF736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8536B8BB1EFAC7B800CCF736 /* RPAppStoreFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPAppStoreFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8536B8BB1EFAC7B800CCF736 /* RPiOSFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPiOSFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8536B8C01EFAC7B800CCF736 /* RPAppStoreFeedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPAppStoreFeedbackTests.swift; sourceTree = "<group>"; };
 		8536B8C21EFAC7B800CCF736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		855B99511F223DF0003A8782 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
-		856B0F291F12AE8000D27EE8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		856B0F2B1F12AF2A00D27EE8 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
-		858120161EFC5C2F00F91828 /* RPAppStoreFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPAppStoreFeedbackViewController.swift; sourceTree = "<group>"; };
-		858120181EFC5C4400F91828 /* RPAppStoreFeedbackStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RPAppStoreFeedbackStoryboard.storyboard; sourceTree = "<group>"; };
+		858120181EFC5C4400F91828 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		85818A5A1F02C64F008D88A8 /* BonMotConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonMotConstants.swift; sourceTree = "<group>"; };
 		85818A6D1F054E37008D88A8 /* SAConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAConfettiView.swift; sourceTree = "<group>"; };
 		85818A6F1F054E8C008D88A8 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
 		85818A701F054E8C008D88A8 /* diamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamond.png; sourceTree = "<group>"; };
 		85818A711F054E8C008D88A8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		85818A721F054E8C008D88A8 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
-		85818A771F056FCD008D88A8 /* star-dos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-dos.png"; sourceTree = "<group>"; };
 		85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x~22x22@2x.png"; sourceTree = "<group>"; };
-		85E518451F12C0B700ADE983 /* activity-dots3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots3.png"; sourceTree = "<group>"; };
-		85E518461F12C0B700ADE983 /* activity-dots3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots3@2x.png"; sourceTree = "<group>"; };
-		85E518471F12C0B700ADE983 /* activity-dots3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots3@3x.png"; sourceTree = "<group>"; };
-		85E5184B1F12C9F500ADE983 /* activity-dots1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots1.png"; sourceTree = "<group>"; };
-		85E5184C1F12C9F500ADE983 /* activity-dots1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots1@2x.png"; sourceTree = "<group>"; };
-		85E5184D1F12C9F500ADE983 /* activity-dots1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots1@3x.png"; sourceTree = "<group>"; };
-		85E5184E1F12C9F500ADE983 /* activity-dots2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots2.png"; sourceTree = "<group>"; };
-		85E5184F1F12C9F500ADE983 /* activity-dots2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots2@2x.png"; sourceTree = "<group>"; };
-		85E518501F12C9F500ADE983 /* activity-dots2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-dots2@3x.png"; sourceTree = "<group>"; };
 		D37EF593E87D4FC322736E2C /* Pods-RPAppStoreFeedbackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPAppStoreFeedbackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPAppStoreFeedbackTests/Pods-RPAppStoreFeedbackTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE4D5F88F58BF8D369906B78 /* Pods_RPAppStoreFeedbackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPAppStoreFeedbackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9A20BE50DECCF0CFA5A9BA /* Pods-RPAppStoreFeedback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPAppStoreFeedback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPAppStoreFeedback/Pods-RPAppStoreFeedback.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8536B8BC1EFAC7B800CCF736 /* RPAppStoreFeedback.framework in Frameworks */,
+				8536B8BC1EFAC7B800CCF736 /* RPiOSFeedback.framework in Frameworks */,
 				FE26331CA16A951D9D9DB8B6 /* Pods_RPAppStoreFeedbackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,7 +109,7 @@
 		8536B8A81EFAC7B800CCF736 = {
 			isa = PBXGroup;
 			children = (
-				8536B8B41EFAC7B800CCF736 /* RPAppStoreFeedback */,
+				8536B8B41EFAC7B800CCF736 /* RPiOSFeedback */,
 				8536B8BF1EFAC7B800CCF736 /* RPAppStoreFeedbackTests */,
 				8536B8B31EFAC7B800CCF736 /* Products */,
 				6BC4C9992E6FFF4081FF773B /* Pods */,
@@ -135,43 +120,37 @@
 		8536B8B31EFAC7B800CCF736 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8536B8B21EFAC7B800CCF736 /* RPAppStoreFeedback.framework */,
-				8536B8BB1EFAC7B800CCF736 /* RPAppStoreFeedbackTests.xctest */,
+				8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */,
+				8536B8BB1EFAC7B800CCF736 /* RPiOSFeedbackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8536B8B41EFAC7B800CCF736 /* RPAppStoreFeedback */ = {
+		8536B8B41EFAC7B800CCF736 /* RPiOSFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				8519B0BF1F8C280C0009D10F /* RPFeedback+UIImage.swift */,
+				8519B0AD1F8C27C80009D10F /* star-large.png */,
+				8519B0AE1F8C27C80009D10F /* RPUser.swift */,
+				8519B0AF1F8C27C80009D10F /* RPStyle.swift */,
+				8519B0B01F8C27C80009D10F /* RPSettings.swift */,
+				8519B0B11F8C27C80009D10F /* RPMetaModel.swift */,
+				8519B0B21F8C27C80009D10F /* RPFeedbackViewController.swift */,
+				8519B0B31F8C27C80009D10F /* RPFeedbackRouter.swift */,
+				8519B0B41F8C27C80009D10F /* RPFeedbackModel.swift */,
+				8519B0B51F8C27C80009D10F /* RPFeedback.swift */,
 				85818A591F02C5FD008D88A8 /* Styles */,
 				85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */,
-				85E5184B1F12C9F500ADE983 /* activity-dots1.png */,
-				85E5184C1F12C9F500ADE983 /* activity-dots1@2x.png */,
-				85E5184D1F12C9F500ADE983 /* activity-dots1@3x.png */,
-				85E5184E1F12C9F500ADE983 /* activity-dots2.png */,
-				85E5184F1F12C9F500ADE983 /* activity-dots2@2x.png */,
-				85E518501F12C9F500ADE983 /* activity-dots2@3x.png */,
-				85E518451F12C0B700ADE983 /* activity-dots3.png */,
-				85E518461F12C0B700ADE983 /* activity-dots3@2x.png */,
-				85E518471F12C0B700ADE983 /* activity-dots3@3x.png */,
-				85818A771F056FCD008D88A8 /* star-dos.png */,
 				85818A6F1F054E8C008D88A8 /* confetti.png */,
 				85818A701F054E8C008D88A8 /* diamond.png */,
 				85818A711F054E8C008D88A8 /* star.png */,
 				85818A721F054E8C008D88A8 /* triangle.png */,
-				858120161EFC5C2F00F91828 /* RPAppStoreFeedbackViewController.swift */,
-				858120181EFC5C4400F91828 /* RPAppStoreFeedbackStoryboard.storyboard */,
+				858120181EFC5C4400F91828 /* Main.storyboard */,
 				85818A6D1F054E37008D88A8 /* SAConfettiView.swift */,
-				856B0F291F12AE8000D27EE8 /* Router.swift */,
-				856B0F2B1F12AF2A00D27EE8 /* Feedback.swift */,
-				8513D3F41F17DDA600C48D5C /* User.swift */,
-				8513D3F61F17E1EA00C48D5C /* RPAppStoreFeedback.swift */,
-				8513D3F81F17E55900C48D5C /* Settings.swift */,
-				855B99511F223DF0003A8782 /* Meta.swift */,
 				8536B8B51EFAC7B800CCF736 /* RPAppStoreFeedback.h */,
 				8536B8B61EFAC7B800CCF736 /* Info.plist */,
 			);
+			name = RPiOSFeedback;
 			path = RPAppStoreFeedback;
 			sourceTree = "<group>";
 		};
@@ -215,9 +194,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8536B8B11EFAC7B800CCF736 /* RPAppStoreFeedback */ = {
+		8536B8B11EFAC7B800CCF736 /* RPiOSFeedback */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8536B8C61EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPAppStoreFeedback" */;
+			buildConfigurationList = 8536B8C61EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPiOSFeedback" */;
 			buildPhases = (
 				DD34EB4440E3D2B095A66D39 /* [CP] Check Pods Manifest.lock */,
 				8536B8AD1EFAC7B800CCF736 /* Sources */,
@@ -230,14 +209,14 @@
 			);
 			dependencies = (
 			);
-			name = RPAppStoreFeedback;
+			name = RPiOSFeedback;
 			productName = RPAppStoreFeedback;
-			productReference = 8536B8B21EFAC7B800CCF736 /* RPAppStoreFeedback.framework */;
+			productReference = 8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8536B8BA1EFAC7B800CCF736 /* RPAppStoreFeedbackTests */ = {
+		8536B8BA1EFAC7B800CCF736 /* RPiOSFeedbackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8536B8C91EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPAppStoreFeedbackTests" */;
+			buildConfigurationList = 8536B8C91EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPiOSFeedbackTests" */;
 			buildPhases = (
 				DAB0C7AAA4A397DB2D1EA912 /* [CP] Check Pods Manifest.lock */,
 				8536B8B71EFAC7B800CCF736 /* Sources */,
@@ -251,9 +230,9 @@
 			dependencies = (
 				8536B8BE1EFAC7B800CCF736 /* PBXTargetDependency */,
 			);
-			name = RPAppStoreFeedbackTests;
+			name = RPiOSFeedbackTests;
 			productName = RPAppStoreFeedbackTests;
-			productReference = 8536B8BB1EFAC7B800CCF736 /* RPAppStoreFeedbackTests.xctest */;
+			productReference = 8536B8BB1EFAC7B800CCF736 /* RPiOSFeedbackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8536B8AC1EFAC7B800CCF736 /* Build configuration list for PBXProject "RPAppStoreFeedback" */;
+			buildConfigurationList = 8536B8AC1EFAC7B800CCF736 /* Build configuration list for PBXProject "RPiOSFeedback" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -291,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8536B8B11EFAC7B800CCF736 /* RPAppStoreFeedback */,
-				8536B8BA1EFAC7B800CCF736 /* RPAppStoreFeedbackTests */,
+				8536B8B11EFAC7B800CCF736 /* RPiOSFeedback */,
+				8536B8BA1EFAC7B800CCF736 /* RPiOSFeedbackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,21 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E518551F12C9F500ADE983 /* activity-dots2@2x.png in Resources */,
-				85A120DE1F2B98EC0061F504 /* x~22x22@2x.png in Resources */,
-				85E518531F12C9F500ADE983 /* activity-dots1@3x.png in Resources */,
-				85E518521F12C9F500ADE983 /* activity-dots1@2x.png in Resources */,
-				85E518511F12C9F500ADE983 /* activity-dots1.png in Resources */,
-				85E518541F12C9F500ADE983 /* activity-dots2.png in Resources */,
-				85818A781F056FCD008D88A8 /* star-dos.png in Resources */,
-				85E518491F12C0B700ADE983 /* activity-dots3@2x.png in Resources */,
-				858120191EFC5C4400F91828 /* RPAppStoreFeedbackStoryboard.storyboard in Resources */,
-				85E518561F12C9F500ADE983 /* activity-dots2@3x.png in Resources */,
+				8531DACD1F8C53E800FD6F0E /* Main.storyboard in Resources */,
+				8531DACA1F8C51CC00FD6F0E /* x~22x22@2x.png in Resources */,
 				85818A761F054E8C008D88A8 /* triangle.png in Resources */,
 				85818A751F054E8C008D88A8 /* star.png in Resources */,
+				8519B0B61F8C27C80009D10F /* star-large.png in Resources */,
 				85818A741F054E8C008D88A8 /* diamond.png in Resources */,
-				85E5184A1F12C0B700ADE983 /* activity-dots3@3x.png in Resources */,
-				85E518481F12C0B700ADE983 /* activity-dots3.png in Resources */,
 				85818A731F054E8C008D88A8 /* confetti.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,15 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				856B0F2A1F12AE8000D27EE8 /* Router.swift in Sources */,
-				85818A5B1F02C64F008D88A8 /* BonMotConstants.swift in Sources */,
-				8513D3F91F17E55900C48D5C /* Settings.swift in Sources */,
-				8513D3F51F17DDA600C48D5C /* User.swift in Sources */,
-				8513D3F71F17E1EA00C48D5C /* RPAppStoreFeedback.swift in Sources */,
-				856B0F2C1F12AF2A00D27EE8 /* Feedback.swift in Sources */,
-				858120171EFC5C2F00F91828 /* RPAppStoreFeedbackViewController.swift in Sources */,
+				8519B0BB1F8C27C80009D10F /* RPFeedbackViewController.swift in Sources */,
+				8519B0BA1F8C27C80009D10F /* RPMetaModel.swift in Sources */,
+				8519B0C01F8C280C0009D10F /* RPFeedback+UIImage.swift in Sources */,
+				8519B0B91F8C27C80009D10F /* RPSettings.swift in Sources */,
+				8519B0B71F8C27C80009D10F /* RPUser.swift in Sources */,
+				8519B0BE1F8C27C80009D10F /* RPFeedback.swift in Sources */,
+				8519B0BD1F8C27C80009D10F /* RPFeedbackModel.swift in Sources */,
 				85818A6E1F054E37008D88A8 /* SAConfettiView.swift in Sources */,
-				855B99521F223DF0003A8782 /* Meta.swift in Sources */,
+				8519B0B81F8C27C80009D10F /* RPStyle.swift in Sources */,
+				8519B0BC1F8C27C80009D10F /* RPFeedbackRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +418,7 @@
 /* Begin PBXTargetDependency section */
 		8536B8BE1EFAC7B800CCF736 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8536B8B11EFAC7B800CCF736 /* RPAppStoreFeedback */;
+			target = 8536B8B11EFAC7B800CCF736 /* RPiOSFeedback */;
 			targetProxy = 8536B8BD1EFAC7B800CCF736 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -628,7 +599,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8536B8AC1EFAC7B800CCF736 /* Build configuration list for PBXProject "RPAppStoreFeedback" */ = {
+		8536B8AC1EFAC7B800CCF736 /* Build configuration list for PBXProject "RPiOSFeedback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8536B8C41EFAC7B800CCF736 /* Debug */,
@@ -637,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8536B8C61EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPAppStoreFeedback" */ = {
+		8536B8C61EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPiOSFeedback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8536B8C71EFAC7B800CCF736 /* Debug */,
@@ -646,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8536B8C91EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPAppStoreFeedbackTests" */ = {
+		8536B8C91EFAC7B800CCF736 /* Build configuration list for PBXNativeTarget "RPiOSFeedbackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8536B8CA1EFAC7B800CCF736 /* Debug */,

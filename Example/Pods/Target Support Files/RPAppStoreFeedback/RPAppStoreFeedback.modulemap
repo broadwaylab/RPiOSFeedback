@@ -1,6 +1,0 @@
-framework module RPAppStoreFeedback {
-  umbrella header "RPAppStoreFeedback-umbrella.h"
-
-  export *
-  module * { export * }
-}

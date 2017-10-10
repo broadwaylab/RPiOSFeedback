@@ -12,14 +12,13 @@
     "Michael Orcutt": "michaeltorcutt@gmail.com"
   },
   "source": {
-    "git": "https://github.com/mtorcutt/RPiOSFeedback.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/mtorcutt/RPiOSFeedback.git"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "RPAppStoreFeedback/**/*.{swift}",
-  "resources": "RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}",
+  "source_files": "RPiOSFeedback/**/*.{swift}",
+  "resources": "RPiOSFeedback/**/*.{png,jpeg,jpg,storyboard,xib}",
   "requires_arc": true,
   "dependencies": {
     "Alamofire": [
@@ -27,8 +26,8 @@
     ]
   },
   "resource_bundles": {
-    "RPAppStoreFeedback": [
-      "RPAppStoreFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
+    "RPiOSFeedback": [
+      "RPiOSFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
     ]
   }
 }

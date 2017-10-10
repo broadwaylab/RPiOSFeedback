@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double RPAppStoreFeedbackVersionNumber;
-FOUNDATION_EXPORT const unsigned char RPAppStoreFeedbackVersionString[];
+FOUNDATION_EXPORT double RPiOSFeedbackVersionNumber;
+FOUNDATION_EXPORT const unsigned char RPiOSFeedbackVersionString[];
 

@@ -4,6 +4,6 @@
 target 'RPFeedbackExample' do
   use_frameworks!
 
-  pod 'RPAppStoreFeedback', :path => '~/Desktop/Projects/ReviewPush/RPAppStoreFeedback'
+  pod 'RPiOSFeedback', :path => '~/Desktop/Projects/ReviewPush/RPAppStoreFeedback'
 
 end

@@ -650,30 +650,17 @@ public class RPFeedbackViewController: UIViewController {
         
         let frameworkBundle = Bundle(for: self)
         
-        let bundleURL = frameworkBundle.url(forResource: "RPiOSFeedback", withExtension: "bundle")
+        let bundleURL = frameworkBundle.url(forResource: "RPAppStoreFeedback", withExtension: "bundle")
         
         let bundle = Bundle(url: bundleURL!)
-
-
-        let fileManager = FileManager.default
         
-        do {
-            let urls = try FileManager.default.contentsOfDirectory(at: (bundle?.resourceURL!)!, includingPropertiesForKeys:[], options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
-            
-            print("docsArray", urls)
-        } catch {
-            print(error)
-        }
-
-//        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-//        
-//        let viewController =
-//            storyboard.instantiateViewController(withIdentifier: "RPFeedbackViewController") as!
-//        RPFeedbackViewController
-//        
-//        return viewController
+        let storyboard = UIStoryboard(name: "RPAppStoreFeedbackStoryboard", bundle: bundle)
         
-        return RPFeedbackViewController()
+        let viewController =
+            storyboard.instantiateViewController(withIdentifier: "RPAppStoreFeedbackViewController") as!
+        RPFeedbackViewController
+        
+        return viewController
         
     }
     

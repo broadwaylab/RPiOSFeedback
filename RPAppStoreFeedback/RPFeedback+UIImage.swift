@@ -12,7 +12,7 @@ extension UIImage {
     
     public class func starImage(forClass: AnyClass) -> UIImage {
         
-        let path = Bundle(for: forClass).path(forResource: "RPAppStoreFeedback", ofType: "bundle")
+        let path = Bundle(for: forClass).path(forResource: "RPiOSFeedback", ofType: "bundle")
 
         let bundle = Bundle(path: path!)
 
