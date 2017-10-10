@@ -12,7 +12,8 @@
     "Michael Orcutt": "michaeltorcutt@gmail.com"
   },
   "source": {
-    "git": "https://github.com/mtorcutt/RPiOSFeedback.git"
+    "git": "https://github.com/mtorcutt/RPiOSFeedback.git",
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "10.0"

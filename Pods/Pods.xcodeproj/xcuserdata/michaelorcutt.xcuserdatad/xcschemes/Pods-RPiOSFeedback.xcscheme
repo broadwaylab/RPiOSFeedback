@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AFD96E498B9BE2637693FA7C12AC777"
-               BuildableName = "Pods_RPAppStoreFeedbackTests.framework"
-               BlueprintName = "Pods-RPAppStoreFeedbackTests"
+               BlueprintIdentifier = "A26B7AE4D548B0CA821BDD27BFCC0A1E"
+               BuildableName = "Pods_RPiOSFeedback.framework"
+               BlueprintName = "Pods-RPiOSFeedback"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AFD96E498B9BE2637693FA7C12AC777"
-            BuildableName = "Pods_RPAppStoreFeedbackTests.framework"
-            BlueprintName = "Pods-RPAppStoreFeedbackTests"
+            BlueprintIdentifier = "A26B7AE4D548B0CA821BDD27BFCC0A1E"
+            BuildableName = "Pods_RPiOSFeedback.framework"
+            BlueprintName = "Pods-RPiOSFeedback"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

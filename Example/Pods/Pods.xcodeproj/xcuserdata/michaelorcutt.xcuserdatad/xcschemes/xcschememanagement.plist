@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RPiOSFeedback.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4BF4B919AEA2943709217D5763A8EA9B</key>
+		<key>139DFF47038CF64951C7100FA58552B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D8C605142B132CC509D4FDBA3A1990D</key>
+		<key>796F2B6CFDEBE8B97C65835911020CE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E077D1F20AE7F523D21675BDA0148F92</key>
 		<dict>
 			<key>primary</key>
 			<true/>

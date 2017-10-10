@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_RPAppStoreFeedbackVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_RPAppStoreFeedbackVersionString[];
+FOUNDATION_EXPORT double Pods_RPiOSFeedbackVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_RPiOSFeedbackVersionString[];
 
