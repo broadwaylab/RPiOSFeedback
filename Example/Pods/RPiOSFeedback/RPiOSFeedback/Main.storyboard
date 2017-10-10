@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -13,7 +14,7 @@
         <!--Feedback View Controller-->
         <scene sceneID="exV-Ri-h0e">
             <objects>
-                <viewController storyboardIdentifier="RPAppStoreFeedbackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yW9-Eh-7g6" customClass="RPFeedbackViewController" customModule="RPAppStoreFeedback" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RPFeedbackViewController" id="yW9-Eh-7g6" customClass="RPFeedbackViewController" customModule="RPiOSFeedback" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6ZG-FX-nRr"/>
                         <viewControllerLayoutGuide type="bottom" id="YGq-nC-Tfh"/>

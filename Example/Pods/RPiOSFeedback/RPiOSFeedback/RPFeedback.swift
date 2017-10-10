@@ -6,7 +6,7 @@
 //  Copyright © 2017 Michael Orcutt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class RPFeedback {
     

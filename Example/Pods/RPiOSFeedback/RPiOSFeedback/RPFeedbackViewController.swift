@@ -256,7 +256,7 @@ public class RPFeedbackViewController: UIViewController {
     }
     
     func setupStars() {
-        
+
         let starImage = UIImage.starImage(forClass: RPFeedbackViewController.self)
         
         for starButton in starButtons {
@@ -650,16 +650,27 @@ public class RPFeedbackViewController: UIViewController {
         
         let frameworkBundle = Bundle(for: self)
         
-        let bundleURL = frameworkBundle.url(forResource: "RPAppStoreFeedback", withExtension: "bundle")
+        let bundleURL = frameworkBundle.url(forResource: "RPiOSFeedback", withExtension: "bundle")
         
         let bundle = Bundle(url: bundleURL!)
+
+
+        let fileManager = FileManager.default
         
-        let storyboard = UIStoryboard(name: "RPAppStoreFeedbackStoryboard", bundle: bundle)
-        
+        do {
+            let urls = try FileManager.default.contentsOfDirectory(at: (bundle?.resourceURL!)!, includingPropertiesForKeys:[], options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
+            
+            print("docsArray", urls)
+        } catch {
+            print(error)
+        }
+
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+
         let viewController =
-            storyboard.instantiateViewController(withIdentifier: "RPAppStoreFeedbackViewController") as!
+            storyboard.instantiateViewController(withIdentifier: "RPFeedbackViewController") as!
         RPFeedbackViewController
-        
+
         return viewController
         
     }

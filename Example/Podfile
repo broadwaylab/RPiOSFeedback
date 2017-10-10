@@ -4,6 +4,6 @@
 target 'RPFeedbackExample' do
   use_frameworks!
 
-  pod 'RPiOSFeedback', :path => '~/Desktop/Projects/ReviewPush/RPAppStoreFeedback'
+  pod 'RPiOSFeedback', :git => 'https://github.com/mtorcutt/RPiOSFeedback.git'
 
 end
