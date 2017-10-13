@@ -21,6 +21,7 @@
 		8519B0C01F8C280C0009D10F /* RPFeedback+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B0BF1F8C280C0009D10F /* RPFeedback+UIImage.swift */; };
 		8531DACA1F8C51CC00FD6F0E /* x~22x22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */; };
 		8531DACD1F8C53E800FD6F0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858120181EFC5C4400F91828 /* Main.storyboard */; };
+		8531DACF1F91208100FD6F0E /* RPCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DACE1F91208100FD6F0E /* RPCopy.swift */; };
 		8536B8BC1EFAC7B800CCF736 /* RPiOSFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */; };
 		8536B8C11EFAC7B800CCF736 /* RPAppStoreFeedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536B8C01EFAC7B800CCF736 /* RPAppStoreFeedbackTests.swift */; };
 		8536B8C31EFAC7B800CCF736 /* RPAppStoreFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 8536B8B51EFAC7B800CCF736 /* RPAppStoreFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +56,7 @@
 		8519B0B41F8C27C80009D10F /* RPFeedbackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedbackModel.swift; sourceTree = "<group>"; };
 		8519B0B51F8C27C80009D10F /* RPFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFeedback.swift; sourceTree = "<group>"; };
 		8519B0BF1F8C280C0009D10F /* RPFeedback+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RPFeedback+UIImage.swift"; sourceTree = "<group>"; };
+		8531DACE1F91208100FD6F0E /* RPCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCopy.swift; sourceTree = "<group>"; };
 		8536B8B21EFAC7B800CCF736 /* RPiOSFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPiOSFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8536B8B51EFAC7B800CCF736 /* RPAppStoreFeedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppStoreFeedback.h; sourceTree = "<group>"; };
 		8536B8B61EFAC7B800CCF736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				8519B0B31F8C27C80009D10F /* RPFeedbackRouter.swift */,
 				8519B0B41F8C27C80009D10F /* RPFeedbackModel.swift */,
 				8519B0B51F8C27C80009D10F /* RPFeedback.swift */,
+				8531DACE1F91208100FD6F0E /* RPCopy.swift */,
 				85818A591F02C5FD008D88A8 /* Styles */,
 				85A120DD1F2B98EC0061F504 /* x~22x22@2x.png */,
 				85818A6F1F054E8C008D88A8 /* confetti.png */,
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8531DACF1F91208100FD6F0E /* RPCopy.swift in Sources */,
 				8519B0BB1F8C27C80009D10F /* RPFeedbackViewController.swift in Sources */,
 				8519B0BA1F8C27C80009D10F /* RPMetaModel.swift in Sources */,
 				8519B0C01F8C280C0009D10F /* RPFeedback+UIImage.swift in Sources */,
