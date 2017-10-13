@@ -15,12 +15,10 @@ public class RPFeedbackViewController: UIViewController {
     // MARK: – Step and related copy
     
     enum FeedbackStep {
-        
         case promptForReview
         case askForFeedback
         case displayFeedback
         case displayReviewSiteOptions
-        
     }
 
     // MARK: – Enum
