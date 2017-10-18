@@ -32,9 +32,43 @@ Present the user with the option to rate your app, gather feedback, and then rat
 * General Feedback
 Present the user with the option to rate a business location, gather feedback, and rate the app on various review sites.
 
-#### Customizing the SDK
+#### Present Feedback via UIViewController Extension
 
-### Style (RPStyle Class)
+presentFeedback is a UIViewController extension that takes the following parameters.
+* Settings
+This is used for general setup such as the feedback type to present, APIKey, APISecret, etc.
+* Feedback
+This is the model that is constructed and sent to ReviewPush's API.
+* Style
+This allows you to adjust the style to your own app.
+* Copy
+This allows you to adjust copy however you would like.
+
+```
+presentFeedback(settings: settings, feedback: model, style: style, copy: copy)
+```
+
+```
+let settings          = RPSettings()
+settings.feedbackType = .general
+settings.APIKey       = APIKey
+settings.APISecret    = APISecret
+
+let feedback         = RPFeedbackModel()
+feedback.reviewer    = "Michael Orcutt"
+feedback.email       = "michaeltorcutt@gmail.com"
+feedback.locationID  = "22669"
+
+let style = RPStyle()
+
+let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+
+presentFeedback(settings: model.settings!, feedback: model.model!, style: model.style!, copy: model.copy!)
+```
+
+### Customizing the SDK
+
+#### Style (RPStyle Class)
 
 ```
 let style                                 = RPStyle()
