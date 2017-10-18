@@ -37,18 +37,17 @@ Present the user with the option to rate a business location, gather feedback, a
 ### Style (RPStyle Class)
 
 ```
-        let style                                 = RPStyle()
-        
-        style.view.backgroundColor                = colors.blue.withAlphaComponent(0.60)
-        style.confetti.displays                   = false
-        style.stars.defaultColor                  = UIColor.lightGray.withAlphaComponent(0.75)
-        style.stars.selectedColor                 = colors.green
-        style.labels.titleLabelFont               = UIFont.boldSystemFont(ofSize: 20.0)
-        style.labels.descriptionLabelFont         = UIFont.boldSystemFont(ofSize: 14.0)
-        style.buttons.buttonCornerRadius          = 3.0
-        style.buttons.cancelButtonBackgroundColor = colors.red
-        style.buttons.submitButtonBackgroundColor = colors.green
-        
+let style                                 = RPStyle()
+
+style.view.backgroundColor                = colors.blue.withAlphaComponent(0.60)
+style.confetti.displays                   = false
+style.stars.defaultColor                  = UIColor.lightGray.withAlphaComponent(0.75)
+style.stars.selectedColor                 = colors.green
+style.labels.titleLabelFont               = UIFont.boldSystemFont(ofSize: 20.0)
+style.labels.descriptionLabelFont         = UIFont.boldSystemFont(ofSize: 14.0)
+style.buttons.buttonCornerRadius          = 3.0
+style.buttons.cancelButtonBackgroundColor = colors.red
+style.buttons.submitButtonBackgroundColor = colors.green
         
 ```
 
