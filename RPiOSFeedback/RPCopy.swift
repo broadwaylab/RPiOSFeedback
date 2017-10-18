@@ -6,7 +6,7 @@
 //  Copyright © 2017 Michael Orcutt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class RPCopy {
     
@@ -41,7 +41,7 @@ public class RPCopy {
         
     }
     
-    convenience init(feedbackType: RPSettings.FeedbackType, companyDisplayName: String) {
+    public convenience init(feedbackType: RPSettings.FeedbackType, companyDisplayName: String) {
         self.init()
         
         setupTitleLabelText(feedbackType: feedbackType, companyDisplayName: companyDisplayName)

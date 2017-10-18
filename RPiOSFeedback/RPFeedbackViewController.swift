@@ -15,84 +15,10 @@ public class RPFeedbackViewController: UIViewController {
     // MARK: – Step and related copy
     
     enum FeedbackStep {
-        
         case promptForReview
         case askForFeedback
         case displayFeedback
         case displayReviewSiteOptions
-        
-        func titleLabelText(feedbackType: RPSettings.FeedbackType, companyDisplayName: String, rating: Float) -> String {
-            
-            switch feedbackType {
-            case .appStore:
-                
-                switch self {
-                case .promptForReview:
-                    return "If you have a moment, could you please rate your experience with the ReviewPush app?"
-                case .askForFeedback:
-                    
-                    if rating < 4.0 {
-                        return "Could you tell us about your experience?"
-                    } else {
-                        return "Great! We’re glad you are enjoying the app."
-                    }
-                    
-                case .displayFeedback:
-                    return "Can you tell us how to improve?"
-                default:
-                    return String()
-                }
-                
-            case .general:
-                
-                switch self {
-                case .promptForReview:
-                    return "Could you please rate your experience with us at \(companyDisplayName)?"
-                case .askForFeedback:
-                    return "Thanks!"
-                case .displayFeedback:
-                    return "Can you tell us how to improve?"
-                case .displayReviewSiteOptions:
-                    return "Please choose your preferred website below."
-                default:
-                    return String()
-                }
-                
-            }
-            
-        }
-        
-        func descriptionLabelText(feedbackType: RPSettings.FeedbackType, rating: Float) -> String {
-            
-            switch feedbackType {
-            case .appStore:
-                
-                switch self {
-                case .askForFeedback:
-                    return "Your feedback is really important."
-                default:
-                    return String()
-                }
-                
-            case .general:
-                
-                switch self {
-                case .askForFeedback:
-                    
-                    if rating < 4.0 {
-                        return "Could you tell us about your experience?"
-                    } else {
-                        return "Could you do us a favor and share this on a review site?"
-                    }
-                    
-                default:
-                    return String()
-                }
-                
-            }
-            
-        }
-        
     }
 
     // MARK: – Enum
@@ -151,9 +77,8 @@ public class RPFeedbackViewController: UIViewController {
     var feedback: RPFeedbackModel = RPFeedbackModel()
     var style: RPStyle            = RPStyle()
     var settings: RPSettings      = RPSettings()
+    var copy: RPCopy              = RPCopy()
     var reviewSiteLinks: [String: Any]?
-
-    // MARK: – Layout Properties
 
     // MARK: – View lifecycle
     
@@ -256,7 +181,7 @@ public class RPFeedbackViewController: UIViewController {
     }
     
     func setupStars() {
-
+        
         let starImage = UIImage.starImage(forClass: RPFeedbackViewController.self)
         
         for starButton in starButtons {
@@ -355,13 +280,16 @@ public class RPFeedbackViewController: UIViewController {
     }
     
     func updateLabels(step: FeedbackStep) {
-
-        titleLabel.text = step.titleLabelText(feedbackType: settings.feedbackType, companyDisplayName: settings.companyDisplayName, rating: feedback.rating ?? 0)
         
+        let titleLabelText = copy.titleLabelText(feedbackStep: step, rating: feedback.rating ?? 0)
+        
+        titleLabel.text      = titleLabelText
         titleLabel.font      = style.labels.titleLabelFont
         titleLabel.textColor = style.labels.titleLabelTextColor
 
-        descriptionLabel.text  = step.descriptionLabelText(feedbackType: settings.feedbackType, rating: feedback.rating ?? 0)
+        let descriptionLabelText = copy.descriptionLabelText(feedbackStep: step, rating: feedback.rating ?? 0)
+        
+        descriptionLabel.text = descriptionLabelText
 
         descriptionLabel.font      = style.labels.descriptionLabelFont
         descriptionLabel.textColor = style.labels.descriptionLabelTextColor
@@ -556,8 +484,12 @@ public class RPFeedbackViewController: UIViewController {
         switch response.result {
         case .success:
             
-            if settings.feedbackType == .appStore || cancelled == true || self.step() == FeedbackStep.displayFeedback {
+            if settings.feedbackType == .appStore
+            || cancelled == true
+            || self.step() == FeedbackStep.displayFeedback {
+                
                 self.dismiss(displayReview: (settings.feedbackType == .appStore))
+                
             } else if settings.feedbackType == .general && settings.agreedToLeaveFeedback == true {
                 self.updateReviewSites(JSON: response.result.value)
             }
@@ -654,23 +586,12 @@ public class RPFeedbackViewController: UIViewController {
         
         let bundle = Bundle(url: bundleURL!)
 
-
-        let fileManager = FileManager.default
-        
-        do {
-            let urls = try FileManager.default.contentsOfDirectory(at: (bundle?.resourceURL!)!, includingPropertiesForKeys:[], options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
-            
-            print("docsArray", urls)
-        } catch {
-            print(error)
-        }
-
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-
+        
         let viewController =
             storyboard.instantiateViewController(withIdentifier: "RPFeedbackViewController") as!
         RPFeedbackViewController
-
+        
         return viewController
         
     }
@@ -712,11 +633,7 @@ public class RPFeedbackViewController: UIViewController {
                     
                     let URLString = "itms-apps://itunes.apple.com/app/id\(appID)"
                     
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(URL(string: URLString)!, options: [:], completionHandler: nil)
-                    } else {
-
-                    }
+                    UIApplication.shared.open(URL(string: URLString)!, options: [:], completionHandler: nil)
                     
                 }
                 

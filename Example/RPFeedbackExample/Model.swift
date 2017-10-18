@@ -12,13 +12,20 @@ import RPiOSFeedback
 class Model {
     
     var title: String?
-    var type: RPSettings.FeedbackType = .general
+    var settings: RPSettings?
+    var model: RPFeedbackModel?
+    var style: RPStyle?
+    var copy: RPCopy?
     
-    convenience init(title: String, type: RPSettings.FeedbackType) {
+    convenience init(title: String, settings: RPSettings, model: RPFeedbackModel, style: RPStyle, copy: RPCopy) {
         self.init()
         
-        self.title = title
-        self.type  = type
+        self.title    = title
+        self.settings = settings
+        self.model    = model
+        self.style    = style
+        self.copy     = copy
+
     }
     
 }

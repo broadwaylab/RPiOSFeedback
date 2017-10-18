@@ -8,6 +8,7 @@
 
 import UIKit
 import RPiOSFeedback
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -17,10 +18,28 @@ class ViewController: UIViewController {
         let red   = UIColor(red: 234.0/255.0, green: 92.0/255.0, blue: 111.0/255.0, alpha: 1.0)
     }
     
-    let models = [
-        Model(title: "Present General Feedback", type: .general),
-        Model(title: "Present App Store Feedback", type: .appStore)
-    ]
+    var models: [Model] = []
+    let APIKey    = "<Insert APIKEY Here>"
+    let APISecret = "<Insert APISecret Here>"
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    var loading: Bool = false {
+        
+        didSet {
+            
+            let alpha: CGFloat = loading ? 1.0 : 0.0
+            
+            if(loading) {
+                activityIndicatorView.startAnimating()
+            }
+            
+            UIView.animate(withDuration: 0.25) { 
+                self.activityIndicatorView.alpha = alpha
+            }
+            
+        }
+        
+    }
     
     // MARK: – Properties
     
@@ -38,29 +57,45 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent       = false
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: colors.blue]
         
+        setupModels()
+        
         tableView.tableFooterView = UIView()
-
         tableView.reloadData()
         
-        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    // MARK: – Setup models
+    
+    func appStoreModel() -> Model {
+    
+        let settings          = RPSettings()
+        settings.feedbackType = .appStore
+        settings.APIKey       = APIKey
+        settings.APISecret    = APISecret
+        
+        let feedback         = RPFeedbackModel()
+        feedback.reviewer    = "Michael Orcutt"
+        feedback.email       = "michaeltorcutt@gmail.com"
+        feedback.locationID  = "22669"
+        
+        let style                                 = RPStyle()
+        style.view.backgroundColor                = UIColor.black.withAlphaComponent(0.60)
+        style.buttons.cancelButtonBackgroundColor = colors.red
+        style.buttons.submitButtonBackgroundColor = colors.green
+        
+        let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+
+        return Model(title: "Present Feedback with Confetti", settings: settings, model: feedback, style: style, copy: copy)
         
     }
     
-    // MARK: – Status bar
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    // MARK: – Display App Store Feedback
-    
-    func displayFeedbackForModel(_ model: Model) {
+    func generalModelWithCustomStyle() -> Model {
         
         let settings          = RPSettings()
-        settings.feedbackType = model.type
-        settings.APIKey       = "499e6316d767057f2f50ec145f15fb6d"
-        settings.APISecret    = "4c78d668dbebf347164749ed3794fb0a"
-
+        settings.feedbackType = .general
+        settings.APIKey       = APIKey
+        settings.APISecret    = APISecret
+        
         let feedback         = RPFeedbackModel()
         feedback.reviewer    = "Michael Orcutt"
         feedback.email       = "michaeltorcutt@gmail.com"
@@ -79,7 +114,102 @@ class ViewController: UIViewController {
         
         style.buttons.roundButtons = false
         
-        presentFeedback(settings: settings, feedback: feedback, style: style)
+        let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+        
+        return Model(title: "Present Feedback", settings: settings, model: feedback, style: style, copy: copy)
+        
+    }
+    
+    func generalModelWithCustomCopy() -> Model {
+        
+        let settings          = RPSettings()
+        settings.feedbackType = .general
+        settings.APIKey       = APIKey
+        settings.APISecret    = APISecret
+        
+        let feedback         = RPFeedbackModel()
+        feedback.reviewer    = "Michael Orcutt"
+        feedback.email       = "michaeltorcutt@gmail.com"
+        feedback.locationID  = "22669"
+        
+        let style                  = RPStyle()
+        style.view.backgroundColor = colors.blue.withAlphaComponent(0.60)
+
+        let copy                                        = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+        copy.titleLabel.promptForReview                 = "Would you like to review your experience?"
+        copy.titleLabel.askForFeedbackNegativeSentiment = "We're bummed you had a bad time. Can you please tell us why?"
+
+        return Model(title: "Present Feedback with Custom Copy", settings: settings, model: feedback, style: style, copy: copy)
+        
+    }
+    
+    func generalModelWithoutLocation() -> Model {
+        
+        let settings          = RPSettings()
+        settings.feedbackType = .general
+        settings.APIKey       = APIKey
+        settings.APISecret    = APISecret
+        
+        let feedback         = RPFeedbackModel()
+        feedback.reviewer    = "Michael Orcutt"
+        feedback.email       = "michaeltorcutt@gmail.com"
+        
+        let style                  = RPStyle()
+        style.view.backgroundColor = colors.blue.withAlphaComponent(0.60)
+        
+        let copy = RPCopy(feedbackType: .general, companyDisplayName: "ReviewPush")
+        
+        return Model(title: "Present Feedback Lookup Locations", settings: settings, model: feedback, style: style, copy: copy)
+        
+    }
+
+    
+    func setupModels() {
+        
+        models.append(appStoreModel())
+        models.append(generalModelWithCustomStyle())
+        models.append(generalModelWithCustomCopy())
+        models.append(generalModelWithoutLocation())
+
+
+    }
+    
+    // MARK: – Display App Store Feedback
+    
+    func displayFeedbackForModel(_ model: Model) {
+        
+        // We know an ID is available here
+        if let feedbackModel = model.model, let _ = feedbackModel.locationID {
+            
+            presentFeedback(settings: model.settings!, feedback: model.model!, style: model.style!, copy: model.copy!)
+            
+            return
+            
+        }
+        
+        loading = true
+        
+        // Example looking up locations. You can lookup by CLLocation coordinates.
+        Alamofire.request(RPFeedbackRouter.locations(nil, model.settings!)).responseJSON { dataResponse in
+            
+            guard let JSON = dataResponse.result.value as? [String: Any], let data = JSON["data"] as? [[String: Any]] else {
+                return
+            }
+            
+            let firstLocation = data.first
+            
+            if let firstLocationIdentifier = firstLocation?["id"] as? String {
+                
+                model.model!.locationID = firstLocationIdentifier
+                
+                self.presentFeedback(settings: model.settings!, feedback: model.model!, style: model.style!, copy: model.copy!)
+
+            }
+            
+            self.loading = false
+            
+        }
+
 
     }
 
@@ -122,5 +252,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         displayFeedbackForModel(model)
         
     }
+
     
 }
