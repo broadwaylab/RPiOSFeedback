@@ -85,7 +85,7 @@ open class SAConfettiView: UIView {
             return customImage
         }
         
-        let path = Bundle(for: SAConfettiView.self).path(forResource: "RPAppStoreFeedback", ofType: "bundle")
+        let path = Bundle(for: SAConfettiView.self).path(forResource: "RPiOSFeedback", ofType: "bundle")
         let bundle = Bundle(path: path!)
         let imagePath = bundle?.path(forResource: fileName, ofType: "png")
         let url = URL(fileURLWithPath: imagePath!)

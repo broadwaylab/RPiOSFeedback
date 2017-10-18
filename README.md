@@ -1,23 +1,91 @@
 ## RPiOSFeedback 
-RPiOSFeedback is an iOS framework for the [ReviewPush](https://www.reviewpush.com). 
+RPiOSFeedback is an iOS framework for [ReviewPush](https://www.reviewpush.com). You can use this to request feedback for your business or iOS application.
 
 #### Getting Started
 RPiOSFeedback can be installed by adding the following to your Podfile:
 
 `pod 'RPiOSFeedback', :git => 'https://github.com/mtorcutt/RPiOSFeedback.git'`
 
-#### Requirements
+##### Minimum iOS Requirements
 
 | RPFeedback Version | Minimum iOS Version  |
 | :------------------: |:------------------:|
 | 0.0.x                | iOS 10             |
 
-### Usage
+##### Required Credentials
+To use this SDK you will need both an API key and secret. These credentials can be found on your [ReviewPush Dashboard](http://dashboard.reviewpush.com/) under Settings -> ReviewPush API.
 
-**Required**
+Note: This information is only available to accounts with admin rights.
 
-- API Key
-- API Secret
+#### Example App
+In order to use the example app successfully, you will need to replace the APIKey and APISecret credentials in the ViewController class.
+
+The location of these constants can be found [here.](https://github.com/mtorcutt/RPiOSFeedback/blob/dev/Example/RPFeedbackExample/ViewController.swift#L22)
+
+The app has several style and data variations.
+
+#### Types of Feedback to Present
+
+* App Store Feedback
+Present the user with the option to rate your app, gather feedback, and then rate the app on the App Store.
+
+* General Feedback
+Present the user with the option to rate a business location, gather feedback, and rate the app on various review sites.
+
+#### Present Feedback via UIViewController Extension
+
+presentFeedback is a UIViewController extension that takes the following parameters.
+* Settings
+This is used for general setup such as the feedback type to present, APIKey, APISecret, etc.
+* Feedback
+This is the model that is constructed and sent to ReviewPush's API.
+* Style
+This allows you to adjust the style to your own app.
+* Copy
+This allows you to adjust copy however you would like.
+
+```
+presentFeedback(settings: settings, feedback: model, style: style, copy: copy)
+```
+
+```
+let settings          = RPSettings()
+settings.feedbackType = .general
+settings.APIKey       = APIKey
+settings.APISecret    = APISecret
+
+let feedback         = RPFeedbackModel()
+feedback.reviewer    = "Michael Orcutt"
+feedback.email       = "michaeltorcutt@gmail.com"
+feedback.locationID  = "22669"
+
+let style = RPStyle()
+
+let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+
+presentFeedback(settings: model.settings!, feedback: model.model!, style: model.style!, copy: model.copy!)
+```
+
+### Customizing the SDK
+
+#### Style (RPStyle Class)
+
+```
+let style                                 = RPStyle()
+
+style.view.backgroundColor                = colors.blue.withAlphaComponent(0.60)
+style.confetti.displays                   = false
+style.stars.defaultColor                  = UIColor.lightGray.withAlphaComponent(0.75)
+style.stars.selectedColor                 = colors.green
+style.labels.titleLabelFont               = UIFont.boldSystemFont(ofSize: 20.0)
+style.labels.descriptionLabelFont         = UIFont.boldSystemFont(ofSize: 14.0)
+style.buttons.buttonCornerRadius          = 3.0
+style.buttons.cancelButtonBackgroundColor = colors.red
+style.buttons.submitButtonBackgroundColor = colors.green
+        
+```
+
+
 
 ### License
 RPiOSFeedback is released under the MIT license. See LICENSE for details.

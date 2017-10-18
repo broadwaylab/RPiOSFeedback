@@ -86,7 +86,7 @@ public class RPFeedback {
 
 extension UIViewController {
     
-    public func presentFeedback(settings: RPSettings?, feedback: RPFeedbackModel?, style: RPStyle?) {
+    public func presentFeedback(settings: RPSettings?, feedback: RPFeedbackModel?, style: RPStyle?, copy: RPCopy?) {
         
         let viewController                    = RPFeedbackViewController.instance()
         viewController.modalPresentationStyle = .overCurrentContext

@@ -29,18 +29,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n4B-vb-KhT"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a0K-if-vYt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a0K-if-vYt" secondAttribute="trailing" id="CZ1-k1-6hd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a0K-if-vYt" secondAttribute="bottom" id="N9R-JC-axs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Gi-Su-LiK" secondAttribute="bottom" id="PCQ-Qa-h7x"/>
                             <constraint firstAttribute="trailing" secondItem="0Gi-Su-LiK" secondAttribute="trailing" id="RtZ-wq-X8s"/>
+                            <constraint firstItem="a0K-if-vYt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TAZ-wY-ARU"/>
                             <constraint firstItem="0Gi-Su-LiK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mIs-HO-Kqh"/>
                             <constraint firstItem="0Gi-Su-LiK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pNm-TV-vQz"/>
+                            <constraint firstItem="a0K-if-vYt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zJX-sl-PkZ"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Hqv-JJ-PsG"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="a0K-if-vYt" id="Lpy-xY-pc7"/>
                         <outlet property="tableView" destination="0Gi-Su-LiK" id="g0v-mi-Sj2"/>
                     </connections>
                 </viewController>
