@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                  = 'RPiOSFeedback'
-    s.version               = '0.0.4'
+    s.version               = '0.0.5'
     s.summary               = 'RPiOSFeedback'
     s.description           = <<-DESC
     This is the ReviewPush feedback SDK.
