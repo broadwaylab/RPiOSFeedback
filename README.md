@@ -48,6 +48,8 @@ This allows you to adjust copy however you would like.
 presentFeedback(settings: settings, feedback: model, style: style, copy: copy)
 ```
 
+Here is an example of this being implemented.
+
 ```
 let settings          = RPSettings()
 settings.feedbackType = .general
@@ -57,7 +59,7 @@ settings.APISecret    = APISecret
 let feedback         = RPFeedbackModel()
 feedback.reviewer    = "Michael Orcutt"
 feedback.email       = "michaeltorcutt@gmail.com"
-feedback.locationID  = "22669"
+feedback.locationID  = "226699444"
 
 let style = RPStyle()
 
@@ -70,6 +72,51 @@ presentFeedback(settings: model.settings!, feedback: model.model!, style: model.
 
 #### Style (RPStyle Class)
 
+This is where you change fonts, colors, corner radius, etc. 
+
+##### Style View Properties
+| Property  | Description |
+| ------------- | ------------- |
+| backgroundColor  | This is the background color of the full view. Typically this would be transparent. |
+| containerCornerRadius  | This sets the corner radius of the container. The container is the view that contains all of the subviews  |
+| containerBackgroundColor  | This sets the background color of the container. The container is the view that contains all of the subviews  |
+
+##### Style Label Properties
+| Property  | Description |
+| ------------- | ------------- |
+| titleLabelFont  | This sets the top label font. |
+| titleLabelTextColor  | This sets the top label text color |
+| descriptionLabelFont  | This secondary label font  |
+| descriptionLabelTextColor  | This sets the secondary label text color  |
+| sentimentLabelFont  | This sets the sentiment label font. The sentiment label is the labels below the stars displaying negative, neutral, and positive.  |
+| sentimentLabelTextColor  | This sets the sentiment label text color. The sentiment label is the labels below the stars displaying negative, neutral, and positive. |
+
+##### Style Star Properties
+
+| Property  | Description |
+| ------------- | ------------- |
+| defaultColor  | Star colors when not selected. |
+| selectedColor  | Star color when selected. |
+
+##### Style Confetti Properties
+
+| Property  | Description |
+| ------------- | ------------- |
+| displays  | This allows you to turn confetti on and off. |
+| colors  | This is the array of colors confetti will drop as. |
+
+##### Style Buttons Properties
+
+| Property  | Description |
+| ------------- | ------------- |
+| titleLabelFont  | The font for buttons. |
+| cancelButtonBackgroundColor  | This is the cancel button or dismiss button background color. |
+| submitButtonBackgroundColor  | This is the submit button background color. |
+| roundButtons  | This will automatically set the button corner radius to height / 2.0. |
+| buttonCornerRadius  | This will explicity set button corner radius. |
+| reviewSiteTitleFont  | This is the font for review sites. This only applies to general feedback |
+
+##### RPStyle Example
 ```
 let style                                 = RPStyle()
 
@@ -85,7 +132,24 @@ style.buttons.submitButtonBackgroundColor = colors.green
         
 ```
 
+#### Copy (RPCopy Class)
 
+This is where you copy. 
+
+##### TitleLabel and Description Label Properties
+| Property  | Description |
+| ------------- | ------------- |
+| promptForReview  | This is the text that initially displays asking the user to review your site, location, etc. |
+| askForFeedbackPositiveSentiment  | If the user rates 4.0 or higher, this text is displayed.  |
+| askForFeedbackNegativeSentiment  | If the user rates less than 4.0, this text is displayed.  |
+| displayFeedback  | If the user has accepted to give feedback, this text is displayed.  |
+| displayReviewSiteOptions  | If the user agrees to review, this text is displayed.  |
+
+```
+let copy                                        = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+copy.titleLabel.promptForReview                 = "Would you like to review your experience?"
+copy.titleLabel.askForFeedbackNegativeSentiment = "We're bummed you had a bad time. Can you please tell us why?"
+```
 
 ### License
 RPiOSFeedback is released under the MIT license. See LICENSE for details.
