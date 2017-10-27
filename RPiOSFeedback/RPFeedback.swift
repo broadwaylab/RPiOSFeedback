@@ -92,7 +92,13 @@ extension UIViewController {
         viewController.modalPresentationStyle = .overCurrentContext
         
         if let feedback = feedback {
+            
+            feedback.text   = nil
+            feedback.rating = nil
+            feedback.meta   = Meta()
+            
             viewController.feedback = feedback
+            
         }
         
         if let style = style {
@@ -100,7 +106,11 @@ extension UIViewController {
         }
         
         if let settings = settings {
+            
+            settings.agreedToLeaveFeedback = false
+
             viewController.settings = settings
+            
         }
         
         if let copy = copy {

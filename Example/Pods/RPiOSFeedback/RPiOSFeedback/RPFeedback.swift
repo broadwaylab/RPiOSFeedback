@@ -102,6 +102,10 @@ extension UIViewController {
         if let settings = settings {
             viewController.settings = settings
         }
+        
+        if let copy = copy {
+            viewController.copy = copy
+        }
 
         present(viewController, animated: false, completion: nil)
         
