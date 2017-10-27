@@ -1,6 +1,12 @@
 ## RPiOSFeedback 
 RPiOSFeedback is an iOS framework for [ReviewPush](https://www.reviewpush.com). You can use this to request feedback for your business or iOS application.
 
+### Example Video
+Watch the full video <a href="https://vimeo.com/240227391" target="_blank">here</a>.
+
+<a href="https://vimeo.com/240227391" target="_blank"><img src="https://media.giphy.com/media/3ov9jDojE9evM6RVrq/giphy.gif" 
+alt="Example" width="375" height="667" border="10" /></a>
+
 #### Getting Started
 RPiOSFeedback can be installed by adding the following to your Podfile:
 
@@ -18,11 +24,18 @@ To use this SDK you will need both an API key and secret. These credentials can 
 Note: This information is only available to accounts with admin rights.
 
 #### Example App
-In order to use the example app successfully, you will need to replace the APIKey and APISecret credentials in the ViewController class.
+In order to use the example app successfully, you will need to replace the APIKey, APISecret, and location identifiers in the ViewController class.
 
-The location of these constants can be found [here.](https://github.com/mtorcutt/RPiOSFeedback/blob/dev/Example/RPFeedbackExample/ViewController.swift#L22)
+The location of these variables can be found… 
+[APIKey and Secret](https://github.com/mtorcutt/RPiOSFeedback/blob/master/Example/RPFeedbackExample/ViewController.swift#L22)
 
-The app has several style and data variations.
+[Location ID](https://github.com/mtorcutt/RPiOSFeedback/blob/master/Example/RPFeedbackExample/ViewController.swift#L80)
+
+[Location ID](https://github.com/mtorcutt/RPiOSFeedback/blob/master/Example/RPFeedbackExample/ViewController.swift#L103)
+
+[Location ID](https://github.com/mtorcutt/RPiOSFeedback/blob/master/Example/RPFeedbackExample/ViewController.swift#L134)
+
+This app has several style and data variations.
 
 #### Types of Feedback to Present
 
