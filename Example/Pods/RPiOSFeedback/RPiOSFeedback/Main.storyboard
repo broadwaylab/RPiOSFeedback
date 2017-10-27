@@ -152,11 +152,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oyt-mW-PfS">
+                                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oyt-mW-PfS">
                                                         <rect key="frame" x="15" y="602" width="265" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6D-2J-qgR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="122.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="50"/>
                                                                 <color key="backgroundColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="UVk-SY-Gz0"/>
@@ -170,7 +170,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-Xo-j1x">
-                                                                <rect key="frame" x="142.5" y="0.0" width="122.5" height="50"/>
+                                                                <rect key="frame" x="137.5" y="0.0" width="127.5" height="50"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.76078431372549016" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="loW-Qm-uJ9"/>
@@ -232,11 +232,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="0Xq-2d-SwJ" firstAttribute="centerY" secondItem="bRW-Df-phs" secondAttribute="centerY" id="Jo5-P8-j0N"/>
+                                    <constraint firstItem="0Xq-2d-SwJ" firstAttribute="centerX" secondItem="Omu-Bs-Pbz" secondAttribute="centerX" id="O6f-OJ-pI5"/>
                                     <constraint firstItem="bRW-Df-phs" firstAttribute="width" secondItem="GW3-Ae-y8N" secondAttribute="width" constant="-80" id="Vde-Vi-erJ"/>
+                                    <constraint firstItem="0Xq-2d-SwJ" firstAttribute="centerY" secondItem="Omu-Bs-Pbz" secondAttribute="centerY" id="ahA-Kn-wIT"/>
                                     <constraint firstItem="PcJ-sd-hIh" firstAttribute="top" secondItem="GW3-Ae-y8N" secondAttribute="top" constant="35" id="fEY-5H-8A9"/>
                                     <constraint firstItem="PcJ-sd-hIh" firstAttribute="leading" secondItem="GW3-Ae-y8N" secondAttribute="leading" constant="20" id="gzF-N1-A8T"/>
-                                    <constraint firstItem="0Xq-2d-SwJ" firstAttribute="centerX" secondItem="bRW-Df-phs" secondAttribute="centerX" id="sQT-mk-anC"/>
                                 </constraints>
                             </view>
                         </subviews>

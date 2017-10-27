@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
-  - RPiOSFeedback (0.0.4):
+  - RPiOSFeedback (0.0.5):
     - Alamofire
 
 DEPENDENCIES:
@@ -12,8 +12,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  RPiOSFeedback: 05a40af481e4010c66ead4b2c8d25d7acfb489db
+  RPiOSFeedback: 8420d87e692bcb298f3a02e7ed1ab17243e65bc6
 
-PODFILE CHECKSUM: a645446b29333b2c15eabb33cae665f90c3df309
+PODFILE CHECKSUM: bff7d4ccf64c3130f4890ee6469e7f6aa0b4eaee
 
 COCOAPODS: 1.3.1

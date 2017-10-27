@@ -7,17 +7,26 @@
 //
 
 import Alamofire
+import CoreLocation
 
-enum RPFeedbackRouter: URLRequestConvertible {
+public enum RPFeedbackRouter: URLRequestConvertible {
     
     // MARK: – Cases
     
     case feedback(RPFeedbackModel, RPSettings)
+    case locations(CLLocation?, RPSettings)
 
     // MARK: – Method
     
     var method: HTTPMethod {
-        return .post
+        
+        switch self {
+        case .feedback(_):
+            return .post
+        case .locations(_, _):
+            return .get
+        }
+
     }
     
     // MARK: - URL
@@ -27,6 +36,8 @@ enum RPFeedbackRouter: URLRequestConvertible {
         switch self {
         case .feedback(_):
             return "feedback"
+        case .locations(_, _):
+            return "locations"
         }
         
     }
@@ -62,8 +73,15 @@ enum RPFeedbackRouter: URLRequestConvertible {
 
             parameters["metadata"] = ["will_share": feedback.meta.willShare]
             
-        default:
-            break
+        case .locations(let point, _):
+            
+            guard let point = point else {
+                break
+            }
+            
+            parameters["latitude"]  = point.coordinate.latitude
+            parameters["longitude"] = point.coordinate.longitude
+
         }
         
         return parameters
@@ -72,7 +90,7 @@ enum RPFeedbackRouter: URLRequestConvertible {
     
     // MARK: – Request
     
-    func asURLRequest() throws -> URLRequest {
+    public func asURLRequest() throws -> URLRequest {
         
         let url = try "https://dashboard.reviewpush.com/api/company".asURL()
         
@@ -85,7 +103,7 @@ enum RPFeedbackRouter: URLRequestConvertible {
         let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)
         
         switch self {
-        case .feedback(_, let settings):
+        case .feedback(_, let settings), .locations(_, let settings):
             
             guard let APISecret = settings.APISecret, let APIKey = settings.APIKey else {
                 break

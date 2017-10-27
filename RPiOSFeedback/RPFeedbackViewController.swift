@@ -44,7 +44,8 @@ public class RPFeedbackViewController: UIViewController {
     @IBOutlet weak var noThanksButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var starButtonsStackView: UIStackView!
-    @IBOutlet weak var backgroundViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var  backgroundViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerYConstraint: NSLayoutConstraint!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var reviewSitesStackView: UIStackView!
@@ -169,6 +170,10 @@ public class RPFeedbackViewController: UIViewController {
     }
     
     func setupContainer() {
+        
+        if view.bounds.width < 375.0 {
+            containerWidthConstraint.constant = -40.0
+        }
         
         containerPosition = .top
         
@@ -356,7 +361,6 @@ public class RPFeedbackViewController: UIViewController {
             textView.isHidden             = true
             reviewSitesStackView.isHidden = false
 
-        default: break
         }
 
     }
@@ -380,7 +384,7 @@ public class RPFeedbackViewController: UIViewController {
             
         case RPSettings.FeedbackType.appStore:
             
-            guard let rating = feedback.rating else {
+            guard let _ = feedback.rating else {
                 return .promptForReview
             }
 
@@ -389,8 +393,6 @@ public class RPFeedbackViewController: UIViewController {
             } else {
                 return .displayFeedback
             }
-            
-            break
             
         }
         
@@ -412,7 +414,7 @@ public class RPFeedbackViewController: UIViewController {
         
         feedback.rating = rating
         
-        for (index, starButton) in starButtons.enumerated() {
+        for (_, starButton) in starButtons.enumerated() {
             
             let tag = (starButton.tag - 1000)
 
@@ -432,6 +434,10 @@ public class RPFeedbackViewController: UIViewController {
     
     @IBAction func yesTapped(_ sender: Any) {
         
+        guard let rating = feedback.rating else {
+            return
+        }
+        
         let previouslyAgreedToLeaveFeedback = settings.agreedToLeaveFeedback
         
         settings.agreedToLeaveFeedback = true
@@ -440,8 +446,11 @@ public class RPFeedbackViewController: UIViewController {
         
         let step = self.step()
         
-        if step == .displayReviewSiteOptions || (step == .displayFeedback && previouslyAgreedToLeaveFeedback == true) {
+        if step == .displayReviewSiteOptions
+        || (step == .displayFeedback && previouslyAgreedToLeaveFeedback == true)
+        || (step == .displayFeedback && rating >= 4.0) {
             submit(cancelled: false)
+            return
         }
         
         updateStep()
@@ -475,8 +484,9 @@ public class RPFeedbackViewController: UIViewController {
             
             self.descriptionLabel.isHidden = true
             
+            
         }
-
+        
     }
     
     func handleResponse(_ response: DataResponse<Any>, cancelled: Bool) {
@@ -530,8 +540,12 @@ public class RPFeedbackViewController: UIViewController {
             self.reviewSiteLinks = reviewSiteLinks
             
             self.buttonStackView.isHidden = true
+            self.reviewSitesStackView.isHidden = false
+            self.starButtonsStackView.isHidden = true
             
         }
+        
+        self.updateStep()
         
         self.displayActivityIndicator = false
         
@@ -565,7 +579,12 @@ public class RPFeedbackViewController: UIViewController {
     func keyboardWillShow(_ notification: Notification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            backgroundViewHeightConstraint.constant -= keyboardSize.height
+            
+            UIView.animate(withDuration: 0.35, animations: { 
+                self.backgroundViewHeightConstraint.constant -= keyboardSize.height
+                self.view.layoutIfNeeded()
+            })
+            
         }
 
     }

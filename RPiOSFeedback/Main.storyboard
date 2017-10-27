@@ -73,7 +73,7 @@
                                                     </stackView>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="baR-Oo-vqj">
                                                         <rect key="frame" x="15" y="132" width="265" height="218"/>
-                                                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="15" right="20"/>
+                                                        <edgeInsets key="layoutMargins" top="10" left="20" bottom="15" right="20"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="hxb-tC-F3y">
                                                         <rect key="frame" x="15" y="360" width="265" height="51"/>
@@ -217,8 +217,8 @@
                                             <constraint firstAttribute="height" secondItem="PND-y0-Gi5" secondAttribute="height" id="xOx-aC-q0G"/>
                                         </constraints>
                                     </view>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Xq-2d-SwJ">
-                                        <rect key="frame" x="39" y="-1" width="295" height="667"/>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Xq-2d-SwJ">
+                                        <rect key="frame" x="176.5" y="322.5" width="20" height="20"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcJ-sd-hIh">
@@ -237,6 +237,7 @@
                                     <constraint firstItem="0Xq-2d-SwJ" firstAttribute="centerY" secondItem="Omu-Bs-Pbz" secondAttribute="centerY" id="ahA-Kn-wIT"/>
                                     <constraint firstItem="PcJ-sd-hIh" firstAttribute="top" secondItem="GW3-Ae-y8N" secondAttribute="top" constant="35" id="fEY-5H-8A9"/>
                                     <constraint firstItem="PcJ-sd-hIh" firstAttribute="leading" secondItem="GW3-Ae-y8N" secondAttribute="leading" constant="20" id="gzF-N1-A8T"/>
+                                    <constraint firstItem="bRW-Df-phs" firstAttribute="centerY" secondItem="GW3-Ae-y8N" secondAttribute="centerY" id="ju3-Ul-JwQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -248,7 +249,6 @@
                             <constraint firstItem="GW3-Ae-y8N" firstAttribute="leading" secondItem="zz4-Cg-5tR" secondAttribute="leading" id="9Xm-Az-aCq"/>
                             <constraint firstItem="GW3-Ae-y8N" firstAttribute="height" secondItem="zz4-Cg-5tR" secondAttribute="height" id="MAo-8S-44t"/>
                             <constraint firstItem="bRW-Df-phs" firstAttribute="height" secondItem="zz4-Cg-5tR" secondAttribute="height" placeholder="YES" id="qkL-ll-zbH"/>
-                            <constraint firstItem="bRW-Df-phs" firstAttribute="centerY" secondItem="zz4-Cg-5tR" secondAttribute="centerY" id="yNT-KU-hjO"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -260,7 +260,8 @@
                         <outlet property="backgroundViewHeightConstraint" destination="MAo-8S-44t" id="3Nr-6P-7TV"/>
                         <outlet property="buttonStackView" destination="oyt-mW-PfS" id="3wC-JI-Pow"/>
                         <outlet property="containerView" destination="bRW-Df-phs" id="ib5-dL-0OM"/>
-                        <outlet property="containerYConstraint" destination="yNT-KU-hjO" id="kDA-pt-DAR"/>
+                        <outlet property="containerWidthConstraint" destination="Vde-Vi-erJ" id="kfk-TE-p5p"/>
+                        <outlet property="containerYConstraint" destination="ju3-Ul-JwQ" id="rib-0T-bRm"/>
                         <outlet property="descriptionLabel" destination="cJv-mK-gzV" id="6m8-DP-z0M"/>
                         <outlet property="dismissButton" destination="PcJ-sd-hIh" id="nqt-jb-IGa"/>
                         <outlet property="greatLabel" destination="p7N-Gq-0e4" id="3lf-Op-q0C"/>

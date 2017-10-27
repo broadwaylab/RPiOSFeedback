@@ -16,10 +16,11 @@ class ViewController: UIViewController {
         let blue  = UIColor(red: 52.0/255.0, green: 67.0/255.0, blue: 92.0/255.0, alpha: 1.0)
         let green = UIColor(red: 69.0/255.0, green: 203.0/255.0, blue: 133.0/255.0, alpha: 1.0)
         let red   = UIColor(red: 234.0/255.0, green: 92.0/255.0, blue: 111.0/255.0, alpha: 1.0)
+        let gray   = UIColor(red: 180.0/255.0, green: 180.0/255.0, blue: 180.0/255.0, alpha: 1.0)
     }
     
     var models: [Model] = []
-    let APIKey    = "<Insert APIKEY Here>"
+    let APIKey    = "<Insert APIKey Here>"
     let APISecret = "<Insert APISecret Here>"
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -76,16 +77,16 @@ class ViewController: UIViewController {
         let feedback         = RPFeedbackModel()
         feedback.reviewer    = "Michael Orcutt"
         feedback.email       = "michaeltorcutt@gmail.com"
-        feedback.locationID  = "22669"
+        feedback.locationID  = "<Insert Location ID Here>"
         
         let style                                 = RPStyle()
         style.view.backgroundColor                = UIColor.black.withAlphaComponent(0.60)
-        style.buttons.cancelButtonBackgroundColor = colors.red
+        style.buttons.cancelButtonBackgroundColor = colors.gray
         style.buttons.submitButtonBackgroundColor = colors.green
         
         let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
 
-        return Model(title: "Present Feedback with Confetti", settings: settings, model: feedback, style: style, copy: copy)
+        return Model(title: "App Store Feedback with Confetti", settings: settings, model: feedback, style: style, copy: copy)
         
     }
     
@@ -99,7 +100,7 @@ class ViewController: UIViewController {
         let feedback         = RPFeedbackModel()
         feedback.reviewer    = "Michael Orcutt"
         feedback.email       = "michaeltorcutt@gmail.com"
-        feedback.locationID  = "22669"
+        feedback.locationID  = "<Insert Location ID Here>"
         
         let style                                 = RPStyle()
         style.view.backgroundColor                = colors.blue.withAlphaComponent(0.60)
@@ -109,14 +110,14 @@ class ViewController: UIViewController {
         style.labels.titleLabelFont               = UIFont.boldSystemFont(ofSize: 20.0)
         style.labels.descriptionLabelFont         = UIFont.boldSystemFont(ofSize: 14.0)
         style.buttons.buttonCornerRadius          = 3.0
-        style.buttons.cancelButtonBackgroundColor = colors.red
+        style.buttons.cancelButtonBackgroundColor = colors.gray
         style.buttons.submitButtonBackgroundColor = colors.green
         
         style.buttons.roundButtons = false
         
-        let copy = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+        let copy = RPCopy(feedbackType: .general, companyDisplayName: "ReviewPush")
         
-        return Model(title: "Present Feedback", settings: settings, model: feedback, style: style, copy: copy)
+        return Model(title: "Feedback with Style Changes", settings: settings, model: feedback, style: style, copy: copy)
         
     }
     
@@ -130,16 +131,16 @@ class ViewController: UIViewController {
         let feedback         = RPFeedbackModel()
         feedback.reviewer    = "Michael Orcutt"
         feedback.email       = "michaeltorcutt@gmail.com"
-        feedback.locationID  = "22669"
+        feedback.locationID  = "<Insert Location ID Here>"
         
         let style                  = RPStyle()
         style.view.backgroundColor = colors.blue.withAlphaComponent(0.60)
 
-        let copy                                        = RPCopy(feedbackType: .appStore, companyDisplayName: "ReviewPush")
+        let copy                                        = RPCopy(feedbackType: .general, companyDisplayName: "ReviewPush")
         copy.titleLabel.promptForReview                 = "Would you like to review your experience?"
         copy.titleLabel.askForFeedbackNegativeSentiment = "We're bummed you had a bad time. Can you please tell us why?"
 
-        return Model(title: "Present Feedback with Custom Copy", settings: settings, model: feedback, style: style, copy: copy)
+        return Model(title: "Feedback with Custom Copy", settings: settings, model: feedback, style: style, copy: copy)
         
     }
     
@@ -159,7 +160,7 @@ class ViewController: UIViewController {
         
         let copy = RPCopy(feedbackType: .general, companyDisplayName: "ReviewPush")
         
-        return Model(title: "Present Feedback Lookup Locations", settings: settings, model: feedback, style: style, copy: copy)
+        return Model(title: "Feedback with Locations Lookup", settings: settings, model: feedback, style: style, copy: copy)
         
     }
 
