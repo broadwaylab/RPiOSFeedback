@@ -168,6 +168,10 @@ public class RPFeedbackViewController: UIViewController {
         setupActivityIndicatorView()
         setupContainer()
     }
+        
+    @IBAction func handleBackgroundTap() {
+        dismiss(displayReview: false)
+    }
     
     func setupContainer() {
         
@@ -202,10 +206,11 @@ public class RPFeedbackViewController: UIViewController {
             return
         }
         
-        confettiView         = SAConfettiView(frame: self.view.bounds)
-        confettiView?.colors = style.confetti.colors
-        confettiView?.type   = .star
-        confettiView?.alpha  = 0.0
+        confettiView                           = SAConfettiView(frame: self.view.bounds)
+        confettiView?.colors                   = style.confetti.colors
+        confettiView?.type                     = .star
+        confettiView?.alpha                    = 0.0
+        confettiView?.isUserInteractionEnabled = false
         
         confettiView?.startConfetti()
         
