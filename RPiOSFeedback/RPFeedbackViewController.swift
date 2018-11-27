@@ -98,12 +98,12 @@ public class RPFeedbackViewController: UIViewController {
         
         center.addObserver(self,
                            selector: #selector(keyboardWillShow(_:)),
-                           name: .UIKeyboardWillShow,
+                           name: UIResponder.keyboardWillShowNotification,
                            object: nil)
         
         center.addObserver(self,
                            selector: #selector(keyboardWillHide(_:)),
-                           name: .UIKeyboardWillHide,
+                           name: UIResponder.keyboardWillHideNotification,
                            object: nil)
         
         
@@ -273,8 +273,8 @@ public class RPFeedbackViewController: UIViewController {
     func setupTextView() {
         
         textView.layer.cornerRadius = 4.0
-        textView.textContainerInset = UIEdgeInsetsMake(15.0, 12.0, 15.0, 12.0)
-        textView.typingAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 16.0, weight: UIFontWeightMedium), NSForegroundColorAttributeName: UIColor(white: 0.0, alpha: 0.7)]
+        textView.textContainerInset = UIEdgeInsets(top: 15.0, left: 12.0, bottom: 15.0, right: 12.0)
+        textView.typingAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor: UIColor(white: 0.0, alpha: 0.7)]
 
     }
     
@@ -511,9 +511,9 @@ public class RPFeedbackViewController: UIViewController {
             
         case .failure(_):
             
-            let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+            let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             
-            let controller = UIAlertController(title: "Error!", message: "There was an error. Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+            let controller = UIAlertController(title: "Error!", message: "There was an error. Please try again.", preferredStyle: UIAlertController.Style.alert)
             
             controller.addAction(action)
             
@@ -556,7 +556,7 @@ public class RPFeedbackViewController: UIViewController {
         
     }
     
-    func handleLink(_ sender: UIButton) {
+    @objc func handleLink(_ sender: UIButton) {
         
         guard
             let reviewSiteLinks = self.reviewSiteLinks,
@@ -581,9 +581,9 @@ public class RPFeedbackViewController: UIViewController {
     
     // MARK: – Keyboard
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             
             UIView.animate(withDuration: 0.35, animations: { 
                 self.backgroundViewHeightConstraint.constant -= keyboardSize.height
@@ -594,7 +594,7 @@ public class RPFeedbackViewController: UIViewController {
 
     }
 
-    func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         
         backgroundViewHeightConstraint.constant = 0.0
 

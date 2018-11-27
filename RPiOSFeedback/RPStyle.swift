@@ -37,11 +37,11 @@ public class RPStyle {
     
     public struct Labels {
     
-        public var titleLabelFont: UIFont             = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightSemibold)
+        public var titleLabelFont: UIFont             = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.semibold)
         public var titleLabelTextColor: UIColor       = UIColor.darkGray
-        public var descriptionLabelFont: UIFont       = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightMedium)
+        public var descriptionLabelFont: UIFont       = UIFont.systemFont(ofSize: 15.0, weight: UIFont.Weight.medium)
         public var descriptionLabelTextColor: UIColor = UIColor.lightGray
-        public var sentimentLabelFont: UIFont         = UIFont.systemFont(ofSize: 11.0, weight: UIFontWeightLight)
+        public var sentimentLabelFont: UIFont         = UIFont.systemFont(ofSize: 11.0, weight: UIFont.Weight.light)
         public var sentimentLabelTextColor: UIColor   = UIColor.lightGray
 
     }
@@ -68,13 +68,13 @@ public class RPStyle {
     
     public struct Buttons {
         
-        public var titleLabelFont: UIFont                    = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)
+        public var titleLabelFont: UIFont                    = UIFont.systemFont(ofSize: 15.0, weight: UIFont.Weight.semibold)
         public var cancelButtonBackgroundColor: UIColor      = UIColor(red: 173.0/255.0, green: 173.0/255.0, blue: 173.0/255.0, alpha: 1.0)
         public var submitButtonBackgroundColor: UIColor      = UIColor(red: 27.0/255.0, green: 143.0/255.0, blue: 190.0/255.0, alpha: 1.0)
         public var roundButtons: Bool                        = true
         public var buttonCornerRadius: CGFloat               = 0.0
-        public var reviewSiteTitleFont: UIFont               = UIFont.systemFont(ofSize: 17.0, weight: UIFontWeightMedium)
-        public var reviewSiteCancelButtonFont: UIFont        = UIFont.systemFont(ofSize: 13.0, weight: UIFontWeightSemibold)
+        public var reviewSiteTitleFont: UIFont               = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
+        public var reviewSiteCancelButtonFont: UIFont        = UIFont.systemFont(ofSize: 13.0, weight: UIFont.Weight.semibold)
         public var reviewSiteCancelButtonTitleColor: UIColor = UIColor(white: 0.0, alpha: 0.50)
 
     }

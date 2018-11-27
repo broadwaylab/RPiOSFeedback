@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit.UIApplication
 
 public class RPSettings {
     
@@ -111,7 +112,7 @@ public class RPSettings {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.update),
-            name: .UIApplicationDidBecomeActive,
+            name: UIApplication.didBecomeActiveNotification,
             object: nil)
     
     }
@@ -134,7 +135,7 @@ public class RPSettings {
                 return hasDisplayed == false
             } 
             
-            return (Int(count) >= self.trigger.applicationDidBecomeActiveCount) && hasDisplayed == false
+            return (Int(truncating: count) >= self.trigger.applicationDidBecomeActiveCount) && hasDisplayed == false
             
         default:
             return false
@@ -174,7 +175,7 @@ public class RPSettings {
                 return
             }
             
-            userDefaults.set(NSNumber(value: Int(count) + 1), forKey: "RPAppStoreFeedback.count")
+            userDefaults.set(NSNumber(value: Int(truncating: count) + 1), forKey: "RPAppStoreFeedback.count")
         default:
             break
         }
