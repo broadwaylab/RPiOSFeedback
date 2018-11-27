@@ -162,7 +162,6 @@
 				8536B8AE1EFAC7B800CCF736 /* Frameworks */,
 				8536B8AF1EFAC7B800CCF736 /* Headers */,
 				8536B8B01EFAC7B800CCF736 /* Resources */,
-				6A47BFB56C813F05F3B836A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,21 +225,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6A47BFB56C813F05F3B836A4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPiOSFeedback/Pods-RPiOSFeedback-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DD34EB4440E3D2B095A66D39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
